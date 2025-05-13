@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flashloan Attack DApp</title>
+</head>
+<body>
+  <h1> Flashloan 攻擊模擬</h1>
+
+  <button id="connect"> 連接錢包 </button>
+  <span id="wallet-address" style="margin-left: 10px; font-weight: bold;"></span>
+  <p>Victim 合約餘額: <span id="victim-balance">-</span> ETH</p>
+
+  <button id="attack"> 發動攻擊</button>
+
+  <p>合約餘額：<span id="attacker-balance">尚未讀取</span> ETH</p>
+
+  <button id="withdraw">提款</button>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.2/dist/ethers.umd.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
