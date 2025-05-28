@@ -17,8 +17,18 @@
 
   <button id="withdraw">提款</button>
 
+  <h2>TWAP 防禦合約</h2>
+
+  <p>TWAP Victim 餘額: <span id="victim-twap-balance">-</span> ETH</p>
+  <p>目前 TWAP 值: <span id="twap-value">尚未更新</span></p>
+
+  <button id="record-twap">更新 TWAP 價格紀錄</button>
+  <button id="attack-twap">攻擊 TWAP Victim</button>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.2/dist/ethers.umd.min.js"></script>
   <script src="./script.js"></script>
+
 </body>
 </html>
