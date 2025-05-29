@@ -111,3 +111,9 @@
 - Victim 合約會紀錄過去數筆價格
 - 若啟用 TWAP，則僅當 TWAP 價格低於門檻（如 1000）才允許提款
 - 防止單筆瞬間價格操控（需多次紀錄，增加攻擊成本）
+
+如果交易失敗
+
+    - F12查看問題
+    - 有可能是 out of gas，可到以下網址確認，是的話script.js改一下gas limit就好
+        https://sepolia.etherscan.io/
