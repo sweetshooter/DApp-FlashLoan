@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flashloan 攻擊模擬</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="./script.js" defer></script>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f2f4f8;
+        color: #333;
+        padding: 2rem;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      h1, h2 {
+        color: #2c3e50;
+        text-align: center;
+      }
+
+      button {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        margin: 10px 5px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+
+      #wallet-address {
+        display: inline-block;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+
+      .info-block {
+        background: white;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      .label {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flashloan 攻擊模擬</h1>
+
+    <div class="info-block">
+      <button id="connect">連接錢包</button>
+      <span id="wallet-address"></span>
+    </div>
+
+    <div class="info-block">
+      <p><span class="label">Victim 合約餘額:</span> <span id="victim-balance">-</span> ETH</p>
+      <p><label class="label">TWAP 防禦模式:</label>
+      <button id="toggle-twap">啟用中</button></p>
+      <button id="attack">發動攻擊</button>
+      <button id="refill-victim">匯 0.01 ETH 給 Victim</button>
+      
+    </div>
+
+    <div class="info-block">
+      <p><span class="label">合約餘額:</span> <span id="attacker-balance">尚未讀取</span> ETH</p>
+      <button id="withdraw">提款</button>
+    </div>
+
+    <h2>TWAP 防禦合約</h2>
+
+    <div class="info-block">
+      <p><span class="label">目前 TWAP 值:</span> <span id="twap-value">尚未更新</span></p>
+      <button id="reset-twap">重設 TWAP（5筆 2000）</button>
+      <button id="record-twap">更新 TWAP 價格紀錄</button>
+    </div>
+  </body>
+</html>
